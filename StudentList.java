@@ -6,8 +6,13 @@ public class StudentList
 	public static void main(String[] args)
 	 {
 
-//		Check arguments
-		if(args[0].equals("a"))
+		if(args.length == 0 || args.length > 1)
+		{
+			System.out.println("Program terminated.\nPlease Enter a valid argument");
+			return;
+		}
+		else if(args[0].equals("a")) 
+		
 		 {
 			System.out.println("Loading data ...");			
 			try
