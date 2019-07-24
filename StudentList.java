@@ -5,16 +5,16 @@ public class StudentList
  {
 	public static void main(String[] args)
 	 {
-
+	 	Constants cons = new Constants();
 		if(args.length == 0 || args.length > 1)
 		{
 			System.out.println("Program terminated.\nPlease Enter a valid argument");
 			return;
 		}
-		else if(args[0].equals("a")) 
+		else if(args[0].equals(cons.showAll))
 		
 		 {
-			System.out.println("Loading data ...");			
+			System.out.println(cons.dLoading);				
 			try
 			{
 			String reader = loadData("students.txt");
@@ -86,6 +86,9 @@ public class StudentList
 						done=true;
 				}
 			 }
+
+
+			 
 			} catch (Exception e){} 
 			System.out.println("Data Loaded.");				
 		 }
